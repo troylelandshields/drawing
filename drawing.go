@@ -1,3 +1,4 @@
+// package Drawing provides an interface to move an artist around a canvas to draw shapes and lines. It is very similar to the functionality provided on http://goplay.space
 package drawing
 
 import (
@@ -7,18 +8,13 @@ import (
 )
 
 const (
-	// Right can be used to make a 90-degree turn right
-	Right = 90
-
-	// Left can be used to make a 90-degree turn right
-	Left = -90
-
-	// Straight can be used to draw a line in the direction the artist is already facing
-	Straight = 0
-
-	// Backwards can be used to turn the artist around
+	// These values can be used to help when drawing lines or moving
+	Right     = 90
+	Left      = -90
+	Straight  = 0
 	Backwards = 180
 
+	// These are the available colors to use when executing PenDown on a canvas
 	Red     = "red"
 	Blue    = "blue"
 	Green   = "green"
