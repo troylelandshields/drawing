@@ -7,6 +7,8 @@ The drawing package is very much inspired by the drawing capabilities on http://
 
 # Getting Started 
 
+Install package with `go get -u github.com/troylelandshields/drawing`.
+
 To start drawing an image, you must first call the `NewCanvas` function with the desired `height` and `width`.
 
 You must call `canvas.SaveImage(fileName)` when you have finished drawing to save the canvas to an image file.
