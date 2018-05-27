@@ -1,5 +1,7 @@
 package drawing
 
+import "math/rand"
+
 // DrawTriangle draws an equilateral triangle from the bottom-left corner, ending in the same position that it started in.
 func (c *Canvas) DrawTriangle(color string, length int) {
 	c.DrawLine(color, 30, length)
@@ -28,4 +30,33 @@ func (c *Canvas) DrawLine(color string, numDegrees int, numSpaces int) {
 	c.PenDown(color)
 	c.Turn(numDegrees)
 	c.Forward(numSpaces)
+}
+
+// DrawRandom will draw a random number of lines with random colors and random lengths
+func (c *Canvas) DrawRandom() {
+
+	numLines := rand.Int31n(12)
+
+	for i := 0; i < int(numLines); i++ {
+
+		var color string
+		rColor := rand.Int31n(5)
+		switch rColor {
+		case 0:
+			color = Blue
+		case 1:
+			color = Red
+		case 2:
+			color = Cyan
+		case 3:
+			color = Magenta
+		case 4:
+			color = Green
+		}
+
+		numDegrees := rand.Int31n(360)
+		numSpaces := rand.Int31n(5)
+
+		c.DrawLine(color, int(numDegrees), int(numSpaces))
+	}
 }
