@@ -1,4 +1,4 @@
-// package Drawing provides an interface to move an artist around a canvas to draw shapes and lines. It is very similar to the functionality provided on http://goplay.space
+// drawing package provides an interface to move an artist around a canvas to draw shapes and lines. It is very similar to the functionality provided on http://goplay.space
 package drawing
 
 import (
