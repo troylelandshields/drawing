@@ -1,6 +1,9 @@
 package drawing
 
-import "math/rand"
+import (
+	"math/rand"
+	"time"
+)
 
 // DrawTriangle draws an equilateral triangle from the bottom-left corner, ending in the same position that it started in.
 func (c *Canvas) DrawTriangle(color string, length int) {
@@ -34,6 +37,8 @@ func (c *Canvas) DrawLine(color string, numDegrees int, numSpaces int) {
 
 // DrawRandom will draw a random number of lines with random colors and random lengths
 func (c *Canvas) DrawRandom() {
+
+	rand.Seed(time.Now().Unix())
 
 	numLines := rand.Int31n(12)
 
