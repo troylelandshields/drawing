@@ -22,6 +22,8 @@ if err != nil {
 
 # Example Drawings
 
-[Star]()
-[Tree]()
+There are examples in the `./examples` folder that can be useful to see more about how to use the `drawing` package.
+
+[Star](https://github.com/troylelandshields/drawing/blob/master/examples/star/main.go)
+[Tree](https://github.com/troylelandshields/drawing/blob/master/examples/tree/main.go)
 
