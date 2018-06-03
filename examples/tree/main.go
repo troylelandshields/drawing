@@ -34,7 +34,7 @@ func main() {
 	canvas := drawing.NewCanvas(1000, 1500)
 
 	// draw a tree using the recursive branch function
-	branch(canvas, 5, 0.7, 7, 5)
+	branch(canvas, 5, 0.7, 30, 5)
 
 	// don't forget to save the canvas to a file
 	err := canvas.SaveImage("tree.png")
