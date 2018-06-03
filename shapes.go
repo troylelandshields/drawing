@@ -5,6 +5,22 @@ import (
 	"time"
 )
 
+//DrawSickAsTriangles draws a bunch of sick-as triangles and stuff
+func (c *Canvas) DrawSickAsTriangles() {
+	for i := 0; i < 5; i++ {
+		c.DrawTriangle(Green, 6)
+		c.Move(-65, 3)
+	}
+	for i := 0; i < 4; i++ {
+		c.Move(90, 3)
+		c.DrawTriangle(Magenta, 4)
+	}
+	for i := 0; i < 18; i++ {
+		c.DrawRectangle(Cyan, 2, 2)
+		c.Move(25, 1)
+	}
+}
+
 // DrawTriangle draws an equilateral triangle from the bottom-left corner, ending in the same position that it started in.
 func (c *Canvas) DrawTriangle(color string, length int) {
 	c.DrawLine(color, 30, length)
@@ -76,4 +92,21 @@ func (c *Canvas) DrawRandom() {
 
 		c.DrawLine(color, int(numDegrees), int(numSpaces))
 	}
+}
+
+// DrawStopSign allows you to draw a stop sign with your choice of sign and pole color--avoid messing with the sizing on this one though, it's a bitch
+func (c *Canvas) DrawStopSign(signColor string, poleColor string) {
+	// drawing octagon
+	for i := 0; i < 8; i++ {
+		c.DrawLine(signColor, 45, 3)
+	}
+	// drawing pole
+	c.Move(Right, 4)
+	c.Move(Right, 5)
+	c.Turn(Left)
+
+	c.DrawRectangle(poleColor, 10, 1)
+
+	// face gopher forwards again
+	c.Turn(Left)
 }
