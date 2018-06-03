@@ -37,13 +37,14 @@ func (c *Canvas) DrawLine(color string, numDegrees int, numSpaces int) {
 
 //DrawPoly added by Holly
 func (c *Canvas) DrawPoly(color string, length int) {
-	c.DrawLine(color, 90, length)
-	c.DrawLine(color, 60, length)
-	c.DrawLine(color, 60, length)
-	c.DrawLine(color, 60, length)
-	c.DrawLine(color, 60, length)
-	c.DrawLine(color, 60, length)
+	c.DrawLine(color, 90, 3)
+
+	for i := 0; i < 5; i++ {
+		c.DrawLine(Magenta, 60, length)
+	}
+
 	c.Turn(Right)
+
 }
 
 // DrawRandom will draw a random number of lines with random colors and random lengths

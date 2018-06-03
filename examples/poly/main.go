@@ -14,7 +14,7 @@ func main() {
 	for i := 0; i < 3; i++ {
 
 		canvas.Move(0, 0)
-		canvas.DrawPoly(drawing.Magenta, 5)
+		canvas.DrawPoly(drawing.Magenta, 3)
 	}
 
 	// don't forget to save the canvas to a file
