@@ -81,3 +81,20 @@ func (c *Canvas) DrawRandom() {
 		c.DrawLine(color, int(numDegrees), int(numSpaces))
 	}
 }
+
+// DrawStopSign allows you to draw a stop sign with your choice of sign and pole color--avoid messing with the sizing on this one though, it's a bitch
+func (c *Canvas) DrawStopSign(signColor string, poleColor string) {
+	// drawing octagon
+	for i := 0; i < 8; i++ {
+		c.DrawLine(signColor, 45, 3)
+	}
+	// drawing pole
+	c.Move(Right, 4)
+	c.Move(Right, 5)
+	c.Turn(Left)
+
+	c.DrawRectangle(poleColor, 10, 1)
+
+	// face gopher forwards again
+	c.Turn(Left)
+}
