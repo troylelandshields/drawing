@@ -5,6 +5,22 @@ import (
 	"time"
 )
 
+//DrawSickAsTriangles draws a bunch of sick-as triangles and stuff
+func (c *Canvas) DrawSickAsTriangles() {
+	for i := 0; i < 5; i++ {
+		c.DrawTriangle(Green, 6)
+		c.Move(-65, 3)
+	}
+	for i := 0; i < 4; i++ {
+		c.Move(90, 3)
+		c.DrawTriangle(Magenta, 4)
+	}
+	for i := 0; i < 18; i++ {
+		c.DrawRectangle(Cyan, 2, 2)
+		c.Move(25, 1)
+	}
+}
+
 // DrawTriangle draws an equilateral triangle from the bottom-left corner, ending in the same position that it started in.
 func (c *Canvas) DrawTriangle(color string, length int) {
 	c.DrawLine(color, 30, length)
